@@ -1,6 +1,7 @@
 package com.wuyunbin.demo.config;
 
-import org.springframework.amqp.core.*;
+import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.QueueBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,7 +12,6 @@ import org.springframework.context.annotation.Configuration;
 public class TtlQueueConfig {
     public static final String TEST_QUEUE_NAME = "test";
     public static final String DEAD_QUEUE_NAME = "dead";
-
 
     /**
      * 创建并返回一个队列配置，该配置适用于测试场景。
